@@ -5,4 +5,4 @@
     docker run -d --rm --name apicontainer -p 80:80 apicontainer:0.1
 
 ### TO DO:  
-GitHub actions -- проверка линтера, прогон тестов (мб даже сборка и пуш контейнера в харбор?)
+GitHub actions -- сборка и пуш контейнера в докерхаб
