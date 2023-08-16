@@ -4,6 +4,8 @@
 name: syntax check && pytest 
 
 on:
+  push:
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
