@@ -13,7 +13,8 @@ permissions:
 jobs:
   ci:
     strategy:
-      fail-fast: true      
+      fail-fast: true
+      # Isn't needed but I want to keep for possible future tests of github actions
       matrix:
         python-version: ["3.10"]
         poetry-version: ["1.5.1"]
