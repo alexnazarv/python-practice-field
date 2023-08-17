@@ -5,9 +5,8 @@ name: ci
 
 on:
   push:
+    branches: [" master "]
   pull_request:
-  merge:
-    branches: [ "master" ]
 
 permissions:
   contents: read
@@ -17,9 +16,7 @@ env:
   python_version: "3.10"
 
 jobs:
-  testing:
-    if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
-        
+  testing:        
     runs-on: ubuntu-latest
     
     steps:
@@ -49,7 +46,7 @@ jobs:
         poetry run flake8 . --count
 
   build_and_push:
-    if: ${{ github.event_name == 'merge' }}
+    if: ${{ github.event_name != 'pull_request' }}
 
     runs-on: ubuntu-latest
 
