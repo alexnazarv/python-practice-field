@@ -48,6 +48,7 @@ jobs:
         poetry run flake8 . --count
 
   build_and_push:
+    needs: testing
     if: ${{ github.event_name != 'pull_request' }}
 
     runs-on: ubuntu-latest
@@ -60,6 +61,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v4
       with:
+        images: alexnazarv/training_fastapi
         tags: type=ref,event=tag
 
     - name: Set up QEMU
