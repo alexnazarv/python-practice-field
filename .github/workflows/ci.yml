@@ -34,6 +34,12 @@ jobs:
       with:
         poetry-version: ${{ env.poetry_version }}
 
+    - uses: actions/cache@v3
+      name: Define a cache for the virtual environment based on the dependencies lock file
+      with:
+        path: ./.venv
+        key: venv-${{ hashFiles('poetry.lock') }}
+
     - name: Install dependencies
       run: |
         poetry install --no-root
