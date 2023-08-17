@@ -1,44 +1,83 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: syntax check && pytest 
+name: ci
 
 on:
   push:
-    branches: [ "master" ]
   pull_request:
+  merge:
     branches: [ "master" ]
 
 permissions:
   contents: read
 
+env:
+  poetry_version: "1.5.1"
+  python_version: "3.10"
+
 jobs:
   testing:
-    strategy:
-      fail-fast: true
-      matrix:
-        python-version: ["3.10", "3.11"]
+    if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
         
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v3
+
     - name: Set up Python 3.10
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: ${{ env.python_version }}
+
     - name: Run image
       uses: abatilo/actions-poetry@v2
       with:
-        poetry-version: "1.5.1"
-        
+        poetry-version: ${{ env.poetry_version }}
+
     - name: Install dependencies
       run: |
         poetry install --no-root
+
     - name: Test with pytest
       run: |
         poetry run pytest
+
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
         poetry run flake8 . --count
+
+  build_and_push:
+    if: ${{ github.event_name == 'merge' }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+    - uses: actions/checkout@v3
+
+    - name: Docker meta
+    - id: meta
+    - uses: docker/metadata-action@v4
+        with:
+          tags: type=ref,event=tag
+
+    - name: Set up QEMU
+    - uses: docker/setup-qemu-action@v2
+
+    - name: Set up Docker Buildx
+    - uses: docker/setup-buildx-action@v2
+
+    - name: Login to Docker Hub
+    - uses: docker/login-action@v2
+    - with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build and push
+    - uses: docker/build-push-action@v4
+    - with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
