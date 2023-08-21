@@ -1,6 +1,6 @@
 import random
 
-from training_api.api_data_types import PostReadItemsRequestBody
+from data_types import PostReadItemsRequestBody
 
 apple_store_positions = {
     "iPhone 13 Pro": 1099.99,

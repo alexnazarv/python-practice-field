@@ -1,7 +1,5 @@
 [flake8]
-extend-ignore = D100, D101, D102, D103, D104, D205, D400, D401
-max-line-length = 100
-import-order-style = google
+max-line-length = 120
 exclude =
     # No need to traverse our git directory
     .git,
@@ -15,5 +13,7 @@ exclude =
     build,
     # This contains builds of flake8 that we don't want to check
     dist
+; per-file-ignores = 
 max-complexity = 10
+# using " in code, not '
 inline-quotes = "
