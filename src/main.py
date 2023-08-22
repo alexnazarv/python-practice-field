@@ -10,7 +10,7 @@ TO DO на будущее:
   Дока: https://fastapi.tiangolo.com/tutorial/handling-errors/  # noqa: RST301,RST201
 2.Навесть секурность из доки (засунуть в кубер с терминейтед прокси (nginx))
 3.Ознакомиться с куками
-4.https://docs.github.com/en/actions/automating-builds-and-tests/
+4.https://docs.github.com/en/acti   ons/automating-builds-and-tests/
   building-and-testing-python#starting-with-the-python-workflow-template # noqa: RST301
 """
 import uvicorn

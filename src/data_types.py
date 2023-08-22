@@ -10,7 +10,6 @@ from pydantic import Field
 from pydantic import field_validator
 from pydantic import PositiveFloat
 
-
 Charity: Annotated[int | None,
                    Query(title="Optional money for charity",
                          description="Money for charity",
