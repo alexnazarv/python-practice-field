@@ -11,6 +11,14 @@ from pydantic import field_validator
 from pydantic import PositiveFloat
 
 
+Charity: Annotated[int | None,
+                   Query(title="Optional money for charity",
+                         description="Money for charity",
+                         ge=1,
+                         include_in_schema=True,
+                         deprecated=False)]
+
+
 class Stores(str, Enum):
     """Valid stores names."""
 
@@ -38,18 +46,6 @@ class PostReadItemsRequestBody(BaseModel):
 
     products_info: list[ProductsInfo] = Field(
         title="List of products names with corresponding prices")
-
-
-class Charity(BaseModel):
-    """Data type for optional argument "charity" passed to request."""
-
-    charity: Annotated[int | None,
-                       Query(title="Optional money for charity",
-                             description="Money for charity",
-                             alias="clean-sea-charity",
-                             ge=1,
-                             include_in_schema=True,
-                             deprecated=False)]
 
 
 class RequestBody(BaseModel):
