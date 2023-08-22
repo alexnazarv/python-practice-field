@@ -13,12 +13,10 @@ TO DO на будущее:
 4.https://docs.github.com/en/actions/automating-builds-and-tests/
   building-and-testing-python#starting-with-the-python-workflow-template # noqa: RST301
 """
-from fastapi import FastAPI
 import uvicorn
+from fastapi import FastAPI
 
-from src.data_types import Charity
-from src.data_types import RequestBody
-from src.data_types import Stores
+from src.data_types import Charity, RequestBody, Stores
 from src.functions import generate_random_order
 
 app = FastAPI()
