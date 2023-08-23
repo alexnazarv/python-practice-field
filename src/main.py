@@ -24,7 +24,13 @@ app = FastAPI()
 
 @app.get("/orders/{store}")
 async def read_items(store: Stores, charity: Charity = None) -> dict:
-    """Get request returning random busket."""
+    """
+    Get request returning random busket.
+
+    :param store: acceptable store name
+    :param charity: charity donation
+    :returns: random order busket.
+    """
     if store is Stores.apple:
         response = generate_random_order()
 
@@ -35,8 +41,15 @@ async def read_items(store: Stores, charity: Charity = None) -> dict:
 
 
 @app.post("/orders/{store}")
-async def read_custom_items(store: Stores, requestbody: RequestBody, charity: Charity):
-    """Get request returning random busket from data sent by user."""
+async def read_custom_items(store: Stores, requestbody: RequestBody, charity: Charity = None):
+    """
+    Get request returning random busket from data sent by user.
+
+    :param store: acceptable store name
+    :param charity: charity donation
+    :param requestbody: user custom busket to generate order from
+    :returns: random order busket.
+    """
     if store is Stores.apple:
         response = generate_random_order(requestbody)
 
@@ -47,4 +60,4 @@ async def read_custom_items(store: Stores, requestbody: RequestBody, charity: Ch
 
 
 if __name__ == "__main__":
-    uvicorn.run("src.main:app", host="0.0.0.0", port=8000, reload=True)  # noqa: S104, WPS432
+    uvicorn.run("src.main:app", host="0.0.0.0", port=8000, reload=True)  # noqa: S104
