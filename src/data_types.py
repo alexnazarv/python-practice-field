@@ -30,7 +30,7 @@ class ProductsInfo(BaseModel):
     price: PositiveFloat = Field(gt=0)
 
     @field_validator("product_name", mode="before")
-    def product_should_contain_mac(cls, product_name: str) -> str:  # noqa: N805 this is stupid restriction IMHO
+    def product_should_contain_mac(self, product_name: str) -> str:
         """
         Check if user requestbody param product_name contains "mac" substr.
 
