@@ -10,8 +10,9 @@ TO DO на будущее:
   Дока: https://fastapi.tiangolo.com/tutorial/handling-errors/  # noqa: RST301,RST201
 2.Навесть секурность из доки (засунуть в кубер с терминейтед прокси (nginx))
 3.Ознакомиться с куками
-4.https://docs.github.com/en/acti   ons/automating-builds-and-tests/
+4.https://docs.github.com/en/actions/automating-builds-and-tests/
   building-and-testing-python#starting-with-the-python-workflow-template # noqa: RST301
+5. Перекинуть методы в routes
 """
 import uvicorn
 from fastapi import FastAPI
@@ -60,4 +61,4 @@ async def read_custom_items(store: Stores, requestbody: RequestBody, charity: Ch
 
 
 if __name__ == "__main__":
-    uvicorn.run("src.main:app", host="0.0.0.0", port=8000, reload=True)  # noqa: S104
+    uvicorn.run("src.main:app", host="0.0.0.0", port=8000, reload=True)  # noqa: S104 there is only one interface
