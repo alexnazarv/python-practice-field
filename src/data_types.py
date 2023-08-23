@@ -31,7 +31,13 @@ class ProductsInfo(BaseModel):
 
     @field_validator("product_name", mode="before")
     def product_should_contain_mac(cls, product_name: str) -> str:  # noqa: N805 this is stupid restriction IMHO
-        """Check if user requestbody param product_name contains "mac" substr."""
+        """
+        Check if user requestbody param product_name contains "mac" substr.
+
+        :param product_name: checked param
+        :raises ValueError: if product_name doesn't contain mac substr
+        :returns: product_name without changes if condition is passed
+        """
         if "mac" not in product_name.lower():
             raise ValueError("Product_name should involve 'mac'")
         return product_name

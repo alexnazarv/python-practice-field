@@ -1,3 +1,4 @@
+"""Functions used to make responses."""
 import random
 
 from src.data_types import PostReadItemsRequestBody
@@ -16,14 +17,18 @@ apple_store_positions = {
 }
 
 
-def generate_random_order(
-        products_info: dict | PostReadItemsRequestBody = apple_store_positions) -> dict:
-    """Function parses dictionary and generate new one with random quantities and total price"""
+def generate_random_order(products_info: dict | PostReadItemsRequestBody = apple_store_positions) -> dict:
+    """
+    Parse dictionary and generate new one with random quantities and total price.
+
+    :param products_info: dictionary that contains store positions
+    :returns: random basket generated from products_info
+    """
     if products_info != apple_store_positions:
         products_info = products_info.model_dump()
         store_positions = {}
-        for _dict in products_info["products_info"]:
-            store_positions.update({_dict["product_name"]: _dict["price"]})
+        for dict_element in products_info["products_info"]:
+            store_positions.update({dict_element["product_name"]: dict_element["price"]})
     elif products_info == apple_store_positions:
         store_positions = products_info
 
@@ -38,3 +43,7 @@ def generate_random_order(
         "quantity": quantity,
         "total_price": total_product_price,
     }
+
+
+if __name__ == "__main__":
+    generate_random_order()
