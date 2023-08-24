@@ -42,7 +42,7 @@ async def read_items(store: Stores, charity: Charity = None) -> dict:
 
 
 @app.post("/orders/{store}")
-async def read_custom_items(store: Stores, requestbody: RequestBody, charity: Charity = None):
+async def read_custom_items(store: Stores, requestbody: RequestBody, charity: Charity = None) -> dict:
     """
     Get request returning random busket from data sent by user.
 

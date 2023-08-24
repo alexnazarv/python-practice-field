@@ -17,7 +17,7 @@ apple_store_positions = {
 }
 
 
-def generate_random_order(products_info: dict | PostReadItemsRequestBody = apple_store_positions) -> dict:
+def generate_random_order(products_info: PostReadItemsRequestBody = apple_store_positions) -> dict:
     """
     Parse dictionary and generate new one with random quantities and total price.
 

@@ -1,19 +1,20 @@
 """Data types for application."""
 from enum import Enum
-from typing import Annotated
+from typing import Annotated, Optional
 
 from fastapi import Body, Query
 from pydantic import BaseModel, ConfigDict, Field, PositiveFloat, field_validator
 
-Charity = Annotated[
-    int,
-    Query(
-        title="Optional money for charity",
-        description="Money for charity",
-        ge=1,
-        include_in_schema=True,
-        deprecated=False,
-    )]
+Charity = Optional[
+    Annotated[
+        int,
+        Query(
+            title="Optional money for charity",
+            description="Money for charity",
+            ge=1,
+            include_in_schema=True,
+            deprecated=False,
+        )]]
 
 
 class Stores(Enum):
@@ -30,7 +31,7 @@ class ProductsInfo(BaseModel):
     price: PositiveFloat = Field(gt=0)
 
     @field_validator("product_name", mode="before")
-    def product_should_contain_mac(self, product_name: str) -> str:
+    def product_should_contain_mac(cls, product_name: str) -> str:
         """
         Check if user requestbody param product_name contains "mac" substr.
 
