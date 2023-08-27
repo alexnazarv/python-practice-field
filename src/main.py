@@ -18,7 +18,7 @@ import uvicorn
 from fastapi import FastAPI
 
 from src.data_types import Charity, RequestBody, Stores
-from src.functions import generate_random_order
+from functions.methods_functions import generate_random_order
 
 app = FastAPI()
 
