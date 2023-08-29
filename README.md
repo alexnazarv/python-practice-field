@@ -2,11 +2,17 @@
 [![Build Status](https://travis-ci.org/tylerwince/flake8-bandit.svg?branch=master)](https://travis-ci.org/tylerwince/flake8-bandit)  
 Отсюда забрать linkedIn https://github.com/vbriand/vbriand
 
-TO DO:
+### TO DO:
+#### General:
+1. Посмотреть можно ли убрать extra из uvicorn
+#### CI:
 1. Кеширование виртуального окружения
 2. Кеширование Docker image
-3. Красивое оформление README с HTML переносами как у автора fastapi (Просто посередине шапки воткнуть лейблы)
-4. Добавить лейблы по тестам, билдам, линкедин
+3. Добавить тесты линтеров
+4. Оптимизация, посмотреть есть ли лишние actions
+#### Readme:
+1. Красивое оформление с HTML переносами как у автора fastapi (Просто посередине шапки воткнуть лейблы)
+2. Добавить лейблы по тестам, билдам, линкедин
 
 
 ### Description
@@ -35,7 +41,7 @@ docker rmi $(docker images -f "dangling=true" -q)
 ```bash
 poetry run python3 -m pytest
 ```
-OR  
+or
 ```bash
 python3 -m pytest
 ```
