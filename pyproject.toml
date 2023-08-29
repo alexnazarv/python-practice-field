@@ -8,7 +8,6 @@ version = "0.1.0"
 description = ""
 authors = ["alexnazarv <alexnazarv@gmail.com>"]
 readme = "README.md"
-packages = [{include = "training_project"}]
 
 [tool.poetry.dependencies]
 python = "3.10.10"
