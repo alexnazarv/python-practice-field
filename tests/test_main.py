@@ -1,18 +1,7 @@
-"""
-Main module tests.
-
-Чувствую недостаток знаний в этой секции
-
-1. Как выводить описание ошибки, а не только статус код
-   (я делаю "response.json()["detail"][0]["msg"]" и получаю
-   "AssertionError: Field required" вместо красивой ошибки пайдентика)
-2. Как писать тесты, проверяющие все возможные варианты не прибегая к алгоритму
-   "выбираем сценарий" ->  "пишем функцию под него". Т.к. это может требовать 500
-   функций и больше для проектов побольше
-"""
+"""Main module tests."""
 from fastapi.testclient import TestClient
 
-from src.main import app
+from app.main import app
 
 client = TestClient(app)
 
