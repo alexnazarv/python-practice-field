@@ -1,5 +1,11 @@
 
-"""Methods that generate random basket."""
+"""
+Methods that generate random basket.
+
+DESCRIPTION:
+* Get for basket based on preset values
+* Post for one based on user requestbody
+"""
 from fastapi import APIRouter
 
 from app.data_types import Charity, StorePositions, Stores

@@ -1,10 +1,4 @@
-"""
-Main module.
-
-DESCRIPTION:
-* Get для получения рандомных данных
-* Post для передачи словаря из которого будут генериться рандомные данные
-"""
+"""Main module."""
 import uvicorn
 from fastapi import FastAPI
 
