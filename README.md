@@ -1,6 +1,4 @@
-[![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide) 
-[![Build Status](https://travis-ci.org/tylerwince/flake8-bandit.svg?branch=master)](https://travis-ci.org/tylerwince/flake8-bandit)  
-Отсюда забрать linkedIn https://github.com/vbriand/vbriand
+[![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
 ### TO DO:
 #### General:

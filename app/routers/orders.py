@@ -8,7 +8,7 @@ DESCRIPTION:
 """
 from fastapi import APIRouter
 
-from app.data_types import Charity, StorePositions, Stores
+from app.data_types.orders_data_types import Charity, StorePositions, Stores
 from app.functions.methods_functions import generate_random_order
 
 router = APIRouter()

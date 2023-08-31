@@ -1,7 +1,7 @@
 """Functions used to make responses."""
 import secrets
 
-from app.data_types import StorePositions
+from app.data_types.orders_data_types import StorePositions
 from app.functions.common import read_json_to_dict
 
 DEFAULT_STORE_POSITIONS_FILE = 'default_store_positions.json'
