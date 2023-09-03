@@ -1,47 +1,77 @@
-[![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
+<p align="center">
+<a>
+  <img src=https://img.shields.io/badge/python-~3.10-green>
+</a>
+<a>
+  <img src=https://img.shields.io/badge/poetry-1.5.1-green>
+</a>
+<a>
+  <img src=https://img.shields.io/badge/style-wemake-000000.svg
+</a>
+<a>
+  <img src=https://github.com/alexnazarv/training-project-api/actions/workflows/ci.yml/badge.svg>
+</a>
+</p>
 
-### TO DO:
-#### General:
-1. Посмотреть можно ли убрать extra из uvicorn
-#### CI:
-1. Кеширование виртуального окружения
-2. Кеширование Docker image
-3. Добавить тесты линтеров
-4. Оптимизация, посмотреть есть ли лишние actions
-#### Readme:
-1. Красивое оформление с HTML переносами как у автора fastapi (Просто посередине шапки воткнуть лейблы)
-2. Добавить лейблы по тестам, билдам, линкедин
+### TO DO:  
 
+#### CI
+1. Добавить пре-коммит с линтерами
+2. Оптимизация, посмотреть есть ли лишние actions
+3. Сделать ап версии на 1
+4. Кеширование виртуального окружения
+5. Кеширование Docker image
+***
 
-### Description
-Just FastApi playground and part of a bigger one
+## Description
+Just FastApi playground
+
+### Requirements
+* python ~3.10
+* poetry
+
+## Debug
+
+Clone repo first:
+```bash
+git clone git@github.com:alexnazarv/training-project-api.git
+```
 
 ### Run without Docker
+
+Install poetry:
+```bash
+pip install poetry==1.5.1
+```
+
+Move to project directory and make a venv:
+```bash
+cd training-project-api && poetry shell
+```
+
+Install dependencies and run the app:
 ```bash
 poetry install && poetry run python3 -m app.main
 ```
 
-### Run with Docker: 
+### Run with Docker
 
-#### Build image and run container
+Build image and run container:
 ```bash
-docker build . -t apicontainer -t apicontainer:0.1 && 
+docker build . -t apicontainer -t apicontainer:0.1 &&
+docker rmi $(docker images -f "dangling=true" -q) &&
 docker run -d --rm --name apicontainer -p 8000:8000 apicontainer:0.1
 ```
-#### Clean up container and image:
+
+Clean up container and image:
 ```bash
 docker rm -f apicontainer &&
-docker rmi $(docker images apicontainer -q) -f &&
-docker rmi $(docker images -f "dangling=true" -q)
+docker rmi $(docker images apicontainer -q) -f
 ```
 
 ### Run tests
 ```bash
-poetry run python3 -m pytest
-```
-or
-```bash
-python3 -m pytest
+poetry run python3 pytest
 ```
 
 ### Run linters
