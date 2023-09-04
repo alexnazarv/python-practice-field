@@ -13,14 +13,13 @@
 </a>
 </p>
 
-### TO DO:  
+### TO DO:
 
 #### CI
-1. Добавить пре-коммит с линтерами
-2. Оптимизация, посмотреть есть ли лишние actions
-3. Сделать ап версии на 1
-4. Кеширование виртуального окружения
-5. Кеширование Docker image
+1. Оптимизация, посмотреть есть ли лишние actions (поетри, например)
+2. Кеширование виртуального окружения для прогона линтеров и тестов
+3. Использовать semantic release (и convential commit). Сделать пуш в регистри мануальным
+4. Тест для докер имеджа -- сборка и запуск -> гет запрос. @moneretin, надо ли если есть тесты приложения и билд в ci?
 ***
 
 ## Description
@@ -58,9 +57,9 @@ poetry install && poetry run python3 -m app.main
 
 Build image and run container:
 ```bash
-docker build . -t apicontainer -t apicontainer:0.1 &&
+docker build . -t apicontainer -t apicontainer:test &&
 docker rmi $(docker images -f "dangling=true" -q) &&
-docker run -d --rm --name apicontainer -p 8000:8000 apicontainer:0.1
+docker run -d --rm --name apicontainer -p 8000:8000 apicontainer:test
 ```
 
 Clean up container and image:
