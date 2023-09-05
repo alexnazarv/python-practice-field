@@ -40,7 +40,7 @@ class TestPost:
         (
             '/orders/apple?charity=5',
             {'products_info': [
-                {'product_name': 'MacBook Pro 15', 'price': 1399.99},
+                {'product_name': 'MacBook Pro 15', 'price': 1399},
                 {'product_name': 'Apple Watch Series 7', 'price': 449},
             ]},
             HTTPStatus.OK,
@@ -49,7 +49,7 @@ class TestPost:
             '/orders/apple',
             {'products_info': [
                 {'product_name': 'MacBook Pro 15', 'price': 1399.99},
-                {'product_name': 'GALAXY ULTRA', 'price': 899.99},
+                {'product_name': 'GALAXY ULTRA', 'price': 899},
             ]},
             HTTPStatus.UNPROCESSABLE_ENTITY,
         ),
