@@ -15,7 +15,8 @@ repos:
     name: flake8
     description: Python wemake style guide enforcement
     entry: flake8
-    args: ["--config=.flake8", "--count",  "."]
+    args: ["--config=.flake8", "--count"]
+    require_serial: true
     language: system
     types: [python]
 
@@ -25,7 +26,8 @@ repos:
     name: mypy
     description: Python mypy style guide enforcement
     entry: mypy
-    args: ["--config-file=pyproject.toml", "."]
+    args: ["--config-file=pyproject.toml"]
+    require_serial: true
     language: system
     types: [python]
 
@@ -35,6 +37,6 @@ repos:
     name: isort
     description: Python isort
     entry: isort
-    args: ["--settings-file=pyproject.toml", "."]
+    args: ["--settings-file=pyproject.toml"]
     language: system
     types: [python]
