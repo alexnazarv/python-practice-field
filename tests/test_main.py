@@ -73,4 +73,4 @@ class TestPost:
     def test_read_custom_items_to_success(self, url: str, json_body: dict, expected: HTTPStatus) -> None:
         """Tests read_items post request with passed requstbody (json arg)."""
         response = client.post(url, json=json_body)
-        assert response.status_code == expected, response.json()['detail'][0]['msg']
+        assert response.status_code == expected, response.json()
