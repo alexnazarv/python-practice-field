@@ -53,7 +53,7 @@ warn_unused_configs = true
 warn_unused_ignores = true
 explicit_package_bases = true
 disallow_untyped_defs = true
-
+exclude = "tests/"
 
 [tool.isort]
 py_version = 310
