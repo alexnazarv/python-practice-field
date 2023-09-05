@@ -57,7 +57,7 @@ class TestPost:
             '/orders/xiaomi',
             {'products_info': [
                 {'product_name': 'MacBook Pro 15', 'price': 1399.99},
-                {'product_name': 'Apple Watch Series 7', 'price': 449},
+                {'product_name': 'Apple Watch Series 7', 'price': 449.99},
             ]},
             HTTPStatus.UNPROCESSABLE_ENTITY,
         ),
