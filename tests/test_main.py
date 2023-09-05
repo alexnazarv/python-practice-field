@@ -49,7 +49,7 @@ class TestPost:
             '/orders/apple',
             {'products_info': [
                 {'product_name': 'MacBook Pro 15', 'price': 1399.99},
-                {'product_name': 'GALAXY ULTRA', 'price': 799.99},
+                {'product_name': 'GALAXY ULTRA', 'price': 999.99},
             ]},
             HTTPStatus.UNPROCESSABLE_ENTITY,
         ),
