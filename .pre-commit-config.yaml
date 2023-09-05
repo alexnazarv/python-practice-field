@@ -19,15 +19,15 @@ repos:
     language: system
     types: [python]
 
-# - repo: local
-#   hooks:
-#   - id: mypy
-#     name: mypy
-#     description: Python mypy style guide enforcement
-#     entry: mypy
-#     args: ["--config-file=pyproject.toml", "."]
-#     language: system
-#     types: [python]
+- repo: local
+  hooks:
+  - id: mypy
+    name: mypy
+    description: Python mypy style guide enforcement
+    entry: mypy
+    args: ["--config-file=pyproject.toml", "."]
+    language: system
+    types: [python]
 
 - repo: local
   hooks:
