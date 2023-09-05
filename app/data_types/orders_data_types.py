@@ -35,12 +35,12 @@ class ProductsInfo(BaseModel):
     price: PositiveFloat = Field(gt=0)
 
     @field_validator('product_name', mode='before')
-    def product_should_contain_mac(cls, product_name: str) -> str:
+    def product_should_contain_default_substr(cls, product_name: str) -> str:
         """
         Check if information about a product contains default substrings.
 
         :param product_name: checked param
-        :raises ValueError: if product_name doesn't contain mac substr
+        :raises ValueError: if product_name doesn't contain default substr
         :returns: product_name without changes if condition is passed
         """
         name_contains_valid_substr = any(substring in product_name.lower() for substring in DEFAULT_PRODUCTS_SUBSTRS)

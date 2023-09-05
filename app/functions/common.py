@@ -44,4 +44,4 @@ def read_txt_to_list(file_name: str) -> list:
     with open(file_path) as file_object:
         list_object = file_object.read().split('\n')
 
-    return list_object
+    return list(filter(None, list_object))
