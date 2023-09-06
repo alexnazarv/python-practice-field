@@ -14,29 +14,32 @@ python = "~3.10"
 fastapi = "0.101.0"
 uvicorn = {extras = ["standard"], version = "0.23.2"}
 
-
 [tool.poetry.group.dev.dependencies]
 flake8 = "6.1.0"
-pytest = "7.4.0"
-httpx = "0.24.1"
 isort = "5.12.0"
 wemake-python-styleguide = "0.18.0"
 mypy = "1.5.1"
-pre-commit = "^3.4.0"
 
+[tool.poetry.group.test.dependencies]
+httpx = "0.24.1"
+pre-commit = "3.4.0"
+pytest = "7.4.0"
+pytest-cov = "4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-
 [tool.pytest.ini_options]
-addopts = ["--import-mode=importlib", "-ra"]
+addopts = [
+    "--import-mode=importlib",
+    "-ra",
+    "--cache-clear"
+]
 minversion = "6.0"
 testpaths = ["tests"]
 console_output_style = "progress"
 faulthandler_timeout=1
-
 
 [tool.mypy]
 allow_redefinition = false
