@@ -6,7 +6,7 @@ show-source = True
 max-line-length = 120
 max-complexity = 6
 max-local-variables = 10
-classmethod-decorators = field_validator, classmethod
+classmethod-decorators = field_validator, validator, classmethod
 ignore =
 # Doesn't seem good when there is a need to set default integer value for arg in any func
     WPS432

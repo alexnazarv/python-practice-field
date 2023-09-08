@@ -32,7 +32,7 @@ jobs:
       with:
         python-version: ${{ env.PYTHON_VERSION }}
         cache: 'poetry'
-    - run: poetry install
+    - run: poetry install --no-root
 
     - name: test with pytest
       run: poetry run python3 -m pytest --cov=app
