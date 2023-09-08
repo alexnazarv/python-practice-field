@@ -4,7 +4,7 @@ in-project = true
 
 [tool.poetry]
 name = "python-practice-field"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["alexnazarv <alexnazarv@gmail.com>"]
 readme = "README.md"
