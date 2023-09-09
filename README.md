@@ -11,7 +11,10 @@
   <img src=https://img.shields.io/badge/style-wemake-000000.svg>
 </a>
 <a>
-  <img src=https://github.com/alexnazarv/training-project-api/actions/workflows/ci.yml/badge.svg>
+  <img src=https://github.com/alexnazarv/training-project-api/actions/workflows/tests.yml/badge.svg>
+</a>
+<a>
+  <img src=https://github.com/alexnazarv/training-project-api/actions/workflows/publish.yml/badge.svg>
 </a>
 <a>
   <img src=https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit>
@@ -23,19 +26,16 @@ Just a practice field for making, linting, testing and describing python project
 Here is a Docker image that runs FastAPI server with two simple get and post methods.
 
 ### TO DO:
-
+* Написать команду в тестовый CI которая будет тегировать коммит. Дальше используя этот тег пушить пакет в pypi и имедж в докерхаб с тегом коммита.
 #### CI:
 Добавить правила для коммитов:
 * В пайтон код:
   * прогон линтеров и тестов
-  * билд и тест имеджа (если имедж запустился, то все ок)
   * пуш пакета в PYPI
   * пуш имеджа в регистри
   * мануал шаг с деплоем на тест
   * мануал шаг с деплоем на прод
 * В Dockerfile
-  * билд и тест имеджа (если имедж запустился, то все ок)
-  * пуш пакета в PYPI
   * пуш имеджа в регистри
   * мануал шаг с деплоем на тест
   * мануал шаг с деплоем на прод

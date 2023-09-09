@@ -3,7 +3,7 @@ from enum import Enum
 from typing import Annotated, Optional
 
 from fastapi import Body, Query
-from pydantic import BaseModel, ConfigDict, Field, PositiveFloat, field_validator
+from pydantic import BaseModel, ConfigDict, Extra, Field, confloat, validator
 
 from app.functions.common import read_txt_to_list
 
@@ -32,9 +32,9 @@ class ProductsInfo(BaseModel):
     """Check for custom product's info passed to post request."""
 
     product_name: str = Field(max_length=20)
-    price: PositiveFloat = Field(gt=0)
+    price: confloat(gt=1)  # type: ignore
 
-    @field_validator('product_name', mode='before')
+    @validator('product_name', pre=True)
     def product_should_contain_default_substr(cls, product_name: str) -> str:
         """
         Check if information about a product contains default substrings.
@@ -53,7 +53,7 @@ class ProductsInfo(BaseModel):
             )
         return product_name
 
-    model_config = ConfigDict(extra='allow')
+    model_config = ConfigDict(extra=Extra.allow)
 
 
 class StorePositions(BaseModel):

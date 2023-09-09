@@ -32,7 +32,7 @@ class TestPost:
         (
             '/orders/apple',
             {'products_info': [
-                {'product_name': 'iMac', 'price': 1199.99},
+                {'product_name': 'iMac', 'price': 1299.99},
                 {'product_name': 'HomePod Mini', 'price': 99.99},
             ]},
             HTTPStatus.OK,

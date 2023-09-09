@@ -1,8 +1,8 @@
 """Functions used to make responses."""
 import secrets
 
-from app.data_types.orders_data_types import StorePositions
 from app.functions.common import read_json_to_dict
+from app.models.orders_data_types import StorePositions
 
 DEFAULT_STORE_POSITIONS_FILE = 'default_store_positions.json'
 DEFAULT_APPLE_STORE_POSITIONS = StorePositions(**read_json_to_dict(DEFAULT_STORE_POSITIONS_FILE))
@@ -15,7 +15,7 @@ def generate_random_order(products_info: StorePositions = DEFAULT_APPLE_STORE_PO
     :param products_info: dictionary that contains store positions
     :returns: random basket generated from products_info
     """
-    products_info_dumped = products_info.model_dump()
+    products_info_dumped = products_info.dict()
     store_positions = {}
 
     for dict_element in products_info_dumped['products_info']:

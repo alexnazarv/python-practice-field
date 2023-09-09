@@ -11,7 +11,5 @@ ignore =
 # Doesn't seem good when there is a need to set default integer value for arg in any func
     WPS432
 per-file-ignores =
-# There is only one interface
-    app/main.py: S104,
     tests/*: DAR101,S101,WPS306,WPS226
 inline-quotes = '
