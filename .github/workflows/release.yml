@@ -9,6 +9,8 @@ on:
   push:
     paths:
       - Dockerfile
+      - app/**
+      - tests/**
       - pyproject.toml
 
 permissions:
