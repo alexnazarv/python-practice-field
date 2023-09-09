@@ -1,4 +1,4 @@
 """Config for file "main"."""
 
-HOST = '127.0.1'
+HOST = 'localhost'
 PORT = 8000
