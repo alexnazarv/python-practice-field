@@ -12,6 +12,7 @@ on:
       - app/**
       - tests/**
       - pyproject.toml
+      - poetry.lock
 
 permissions:
   contents: write
