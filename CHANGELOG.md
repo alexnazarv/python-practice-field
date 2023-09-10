@@ -2,122 +2,223 @@
 
 
 
-## v0.0.1-rc.1 (2023-09-10)
-
-### Build
-
-* build(Dockerfile,-pyproject.toml,-ci.yml): add commitzen and improve Dockerfile
-
-make image install special version of poetry and add flag --no-root as now we build a python package as well as docker image ([`173829b`](https://github.com/alexnazarv/python-practice-field/commit/173829b64e6b8b344b48c22b2f32d69834775293))
+## v0.0.1 (2023-09-10)
 
 ### Fix
 
-* fix(core): updated
+* fix: Multiple bug fixes, documentation, and build updates
+- Fix issue #123: Resolved a problem with user authentication.
+- Fix issue #124: Addressed a UI rendering issue on mobile devices.
+- Fix issue #125: Corrected an error in the data validation logic.
 
-fix(model): optimized ([`b5494bc`](https://github.com/alexnazarv/python-practice-field/commit/b5494bc7a07c22c1e0b4ea381261268f157d083b))
+Documentation Changes:
+- Updated documentation for the new authentication process.
+- Added usage examples for mobile rendering improvements.
 
-* fix(core): updated
+Build Updates:
+- Upgraded dependencies for improved security.
+- Added CI/CD configuration for automated testing. ([`bb2e3c5`](https://github.com/alexnazarv/python-practice-field/commit/bb2e3c53344d5a1232cd3a53cfa3bb7dfd1ac311))
 
-fix(model): optimized ([`9b6f9e2`](https://github.com/alexnazarv/python-practice-field/commit/9b6f9e2582f50df65da512155bf7d0fda66e77a1))
+* fix: Multiple bug fixes, documentation, and build updates
+- Fix issue #123: Resolved a problem with user authentication.
+- Fix issue #124: Addressed a UI rendering issue on mobile devices.
+- Fix issue #125: Corrected an error in the data validation logic.
 
-* fix(core): updated
+Documentation Changes:
+- Updated documentation for the new authentication process.
+- Added usage examples for mobile rendering improvements.
 
-fix(model): optimized ([`647f64d`](https://github.com/alexnazarv/python-practice-field/commit/647f64d3a541ad1fe26a0c143f8cf3929e2bc84f))
-
-* fix(core): updated
-
-fix(model): fixed ([`008fb4c`](https://github.com/alexnazarv/python-practice-field/commit/008fb4cf56882afab4fd75a9b1bf6236c8bdcacc))
-
-* fix(core): updated
-
-fix(model): fixed ([`832d1f9`](https://github.com/alexnazarv/python-practice-field/commit/832d1f9c4ebfa318aef2d397407829c6382139b5))
-
-* fix(core): updated
-
-fix(model): fixed ([`7da07db`](https://github.com/alexnazarv/python-practice-field/commit/7da07dbdf4ec912fee1da6e252423097142b7d85))
-
-* fix(core): updated
-fix(model): optimized ([`0a1fbe8`](https://github.com/alexnazarv/python-practice-field/commit/0a1fbe8be54c9638217e036851460c6180fdc7c0))
-
-* fix(models): updated ([`42b7a95`](https://github.com/alexnazarv/python-practice-field/commit/42b7a95c2f02736ca899d905004d55935d8c418a))
-
-* fix(test_main): change one of the prices in tests
-
-string to see how does it look in changelog ([`2eaba26`](https://github.com/alexnazarv/python-practice-field/commit/2eaba26a4e356bf75f00674524e803cb121dbbc3))
+Build Updates:
+- Upgraded dependencies for improved security.
+- Added CI/CD configuration for automated testing. ([`3fca3de`](https://github.com/alexnazarv/python-practice-field/commit/3fca3de86b7c3e1cc14a5390efd6bb8d60ff9224))
 
 ### Unknown
 
-*  fix(core): updated
+* Dev (#3)
 
-fix(model): optimized ([`9b7dbaf`](https://github.com/alexnazarv/python-practice-field/commit/9b7dbafd47935f8d366c013d9e1af7621bed5795))
+* fix: Multiple bug fixes, documentation, and build updates
+- Fix issue #123: Resolved a problem with user authentication.
+- Fix issue #124: Addressed a UI rendering issue on mobile devices.
+- Fix issue #125: Corrected an error in the data validation logic.
 
-* bump: version 0.1.0 → 0.1.1 ([`0d2fc29`](https://github.com/alexnazarv/python-practice-field/commit/0d2fc294e59f6037812697808047dafb5905ae61))
+Documentation Changes:
+- Updated documentation for the new authentication process.
+- Added usage examples for mobile rendering improvements.
 
-* adjust readme ([`2874f29`](https://github.com/alexnazarv/python-practice-field/commit/2874f292065ffabd4732ba94bb283d127cc623b8))
+Build Updates:
+- Upgraded dependencies for improved security.
+- Added CI/CD configuration for automated testing.
 
-* update pre-commit ([`8ca509e`](https://github.com/alexnazarv/python-practice-field/commit/8ca509e93bf5df12cba8953d5824dff9cb65a566))
+* fix: Multiple bug fixes, documentation, and build updates
+- Fix issue #123: Resolved a problem with user authentication.
+- Fix issue #124: Addressed a UI rendering issue on mobile devices.
+- Fix issue #125: Corrected an error in the data validation logic.
 
-* check ([`a20afa2`](https://github.com/alexnazarv/python-practice-field/commit/a20afa212bf9c5d09080283ac3a670f83f7d5306))
+Documentation Changes:
+- Updated documentation for the new authentication process.
+- Added usage examples for mobile rendering improvements.
 
-* check ([`0782c1c`](https://github.com/alexnazarv/python-practice-field/commit/0782c1ca4bcc7d54d509d4629c923aec69620933))
+Build Updates:
+- Upgraded dependencies for improved security.
+- Added CI/CD configuration for automated testing.
 
-* check ([`239ca13`](https://github.com/alexnazarv/python-practice-field/commit/239ca13469a5741d82d98f5dd463ad6d15486678))
+* fix: Multiple bug fixes, documentation, and build updates
+- Fix issue #123: Resolved a problem with user authentication.
+- Fix issue #124: Addressed a UI rendering issue on mobile devices.
+- Fix issue #125: Corrected an error in the data validation logic.
 
-* check ([`6d98537`](https://github.com/alexnazarv/python-practice-field/commit/6d985374b20969bc49acdc0915350417699a73a2))
+Documentation Changes:
+- Updated documentation for the new authentication process.
+- Added usage examples for mobile rendering improvements.
 
-* check ([`cf4fb02`](https://github.com/alexnazarv/python-practice-field/commit/cf4fb021e19565da4695ecf0a5b91b7a5b5a0a80))
+Build Updates:
+- Upgraded dependencies for improved security.
+- Added CI/CD configuration for automated testing.
 
-* check ([`2db9468`](https://github.com/alexnazarv/python-practice-field/commit/2db94686d0d8717a95cd8a503c48347faeb494e5))
+* fix: Multiple bug fixes, documentation, and build updates
+- Fix issue #123: Resolved a problem with user authentication.
+- Fix issue #124: Addressed a UI rendering issue on mobile devices.
+- Fix issue #125: Corrected an error in the data validation logic.
 
-* adjust read default ([`ee571e1`](https://github.com/alexnazarv/python-practice-field/commit/ee571e1832383c9af29a7f548bb4eace5e3b8c57))
+Documentation Changes:
+- Updated documentation for the new authentication process.
+- Added usage examples for mobile rendering improvements.
 
-* if cache works ([`f5057e2`](https://github.com/alexnazarv/python-practice-field/commit/f5057e2bc374e490b3888f4c00d8ace6252ce509))
+Build Updates:
+- Upgraded dependencies for improved security.
+- Added CI/CD configuration for automated testing.
 
-* check if cache works ([`6604280`](https://github.com/alexnazarv/python-practice-field/commit/6604280631023ce954ed715560d434210e8b4232))
+---------
 
-* check if cache works ([`dc6f516`](https://github.com/alexnazarv/python-practice-field/commit/dc6f5165d0c358dc7960084fcbe7e74eb40647cf))
+Co-authored-by: a.v.nazarov &lt;a.v.nazarov@s7.ru&gt; ([`0d168a2`](https://github.com/alexnazarv/python-practice-field/commit/0d168a27ea19e75660523a21d721ab70215af458))
 
-* quick fix ([`9549384`](https://github.com/alexnazarv/python-practice-field/commit/954938413f4880a825440d963e316a1931c5a7c9))
+* Dev (#2)
 
-* cache poetry ([`e348893`](https://github.com/alexnazarv/python-practice-field/commit/e348893c88ecd33784df4e060c9263a93cdea897))
+* first commit
 
-* adjust readme ([`e49eb3a`](https://github.com/alexnazarv/python-practice-field/commit/e49eb3aede131894a5e654c02a02adcbc0eb7c88))
+* first day
 
-* day second ([`88fd080`](https://github.com/alexnazarv/python-practice-field/commit/88fd080e768f893d1fcb1f0da5f87d3e1b86538f))
+* first day
 
-* first run ([`ab3d8d4`](https://github.com/alexnazarv/python-practice-field/commit/ab3d8d4195ee93ff49e03a213c528ca9c6958293))
+* first day
 
-* day fifth ([`abbfdb9`](https://github.com/alexnazarv/python-practice-field/commit/abbfdb9827a1157bcf995cfc3766f6b5517a448b))
+* first day
 
-* day fourth ([`d521603`](https://github.com/alexnazarv/python-practice-field/commit/d5216031dc575bc19702904f54068aa649593d41))
+* second day
 
-* day fourth ([`debf2c3`](https://github.com/alexnazarv/python-practice-field/commit/debf2c3d51c529ed803c7f87f298afe187ab5780))
+* second day
 
-* Day fourth ([`5f8d1f2`](https://github.com/alexnazarv/python-practice-field/commit/5f8d1f2b209523524224f317a93ebbdbb54653c6))
+* second day
 
-* day fourth ([`22d063a`](https://github.com/alexnazarv/python-practice-field/commit/22d063a613aeff51129c82b1b5a8bf05416b5487))
+* second day
 
-* day four ([`d85910b`](https://github.com/alexnazarv/python-practice-field/commit/d85910b949e919eafb95ca8c3cd475aced72d67d))
+* day three
 
-* day three ([`318738f`](https://github.com/alexnazarv/python-practice-field/commit/318738f5c74e94adee360ce6309c7eb7e27ac028))
+* day four
 
-* second day ([`f4bf15f`](https://github.com/alexnazarv/python-practice-field/commit/f4bf15f5ff8bde1f1155bf9fb5fe4c1a1a12f3d9))
+* day fourth
 
-* second day ([`ebc7aec`](https://github.com/alexnazarv/python-practice-field/commit/ebc7aec8363d99fcd9037737c6e471219d0bdbd1))
+* Day fourth
 
-* second day ([`a45e871`](https://github.com/alexnazarv/python-practice-field/commit/a45e871722e2a7e2addc3732fc5c14890488f827))
+* day fourth
 
-* second day ([`a5c52d4`](https://github.com/alexnazarv/python-practice-field/commit/a5c52d470a945c334b48076b7702995027d9eccf))
+* day fourth
 
-* first day ([`d0b2da8`](https://github.com/alexnazarv/python-practice-field/commit/d0b2da83b8e35ef46a8b694e8059704f6e77e1f8))
+* day fifth
 
-* first day ([`509dc23`](https://github.com/alexnazarv/python-practice-field/commit/509dc231fdbf839723f0ef30595ffee57d99dd59))
+* first run
 
-* first day ([`7160b69`](https://github.com/alexnazarv/python-practice-field/commit/7160b69c4039af6637bd6f38f94c48aef6ac3c12))
+* day second
 
-* first day ([`5e2c614`](https://github.com/alexnazarv/python-practice-field/commit/5e2c614522e27f923cb39298afd0c311db410514))
+* adjust readme
 
-* first commit ([`3eb5e2d`](https://github.com/alexnazarv/python-practice-field/commit/3eb5e2d47e61c7c6ac176b1b38ad58cd40ec6427))
+* cache poetry
+
+* quick fix
+
+* check if cache works
+
+* check if cache works
+
+* if cache works
+
+* adjust read default
+
+* check
+
+* check
+
+* check
+
+* check
+
+* check
+
+* check
+
+* update pre-commit
+
+* adjust readme
+
+* build(Dockerfile,-pyproject.toml,-ci.yml): add commitzen and improve Dockerfile
+
+make image install special version of poetry and add flag --no-root as now we build a python package as well as docker image
+
+* fix(test_main): change one of the prices in tests
+
+string to see how does it look in changelog
+
+* bump: version 0.1.0 → 0.1.1
+
+* fix(models): updated
+
+* fix(core): updated
+fix(model): optimized
+
+* fix(core): updated
+
+fix(model): optimized
+
+* fix(core): updated
+
+fix(model): fixed
+
+* fix(core): updated
+
+fix(model): fixed
+
+* fix(core): updated
+
+fix(model): fixed
+
+* fix(core): updated
+
+fix(model): optimized
+
+* 0.0.1-rc.1
+
+Automatically generated by python-semantic-release
+
+* fix(core): updated
+
+fix(model): optimized
+
+* fix(core): updated
+
+fix(model): optimized
+
+* 0.0.1-rc.1
+
+Automatically generated by python-semantic-release
+
+* fix(core): updated
+
+fix(model): optimized
+
+---------
+
+Co-authored-by: a.v.nazarov &lt;a.v.nazarov@s7.ru&gt;
+Co-authored-by: semantic-release &lt;semantic-release&gt; ([`a47cfd0`](https://github.com/alexnazarv/python-practice-field/commit/a47cfd06bdf675b66df8d4dc4e6b3897bfdec547))
 
 * Fix poetry cahce ([`6245f13`](https://github.com/alexnazarv/python-practice-field/commit/6245f13bc29f52764fb43ef7f9ee5571f8c1e728))
 
