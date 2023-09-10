@@ -1,0 +1,44 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.2.0
+  hooks:
+  - id: end-of-file-fixer
+  - id: check-yaml
+  - id: check-toml
+  - id: check-merge-conflict
+  - id: check-added-large-files
+  - id: debug-statements
+  - id: trailing-whitespace
+    language_version: python3
+
+- repo: local
+  hooks:
+  - id: flake8
+    name: flake8
+    description: Python wemake style guide enforcement
+    entry: flake8
+    args: ["--config=.flake8", "--count"]
+    require_serial: true
+    language: system
+    types: [python]
+
+- repo: local
+  hooks:
+  - id: mypy
+    name: mypy
+    description: Python mypy style guide enforcement
+    entry: mypy
+    args: ["--config-file=pyproject.toml"]
+    require_serial: true
+    language: system
+    types: [python]
+
+- repo: local
+  hooks:
+  - id: isort
+    name: isort
+    description: Python isort
+    entry: isort
+    args: ["--settings-file=pyproject.toml"]
+    language: system
+    types: [python]
