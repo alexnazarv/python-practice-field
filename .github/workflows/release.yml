@@ -64,7 +64,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/training_api:${{ github.ref }}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/training_api:${{ github.ref_name }}
 
 
   publish_package:
