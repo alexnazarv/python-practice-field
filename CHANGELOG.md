@@ -2,7 +2,7 @@
 
 
 
-## v0.0.1-rc.1 (2023-09-09)
+## v0.0.1-rc.1 (2023-09-10)
 
 ### Build
 
@@ -11,6 +11,14 @@
 make image install special version of poetry and add flag --no-root as now we build a python package as well as docker image ([`173829b`](https://github.com/alexnazarv/python-practice-field/commit/173829b64e6b8b344b48c22b2f32d69834775293))
 
 ### Fix
+
+* fix(core): updated
+
+fix(model): optimized ([`b5494bc`](https://github.com/alexnazarv/python-practice-field/commit/b5494bc7a07c22c1e0b4ea381261268f157d083b))
+
+* fix(core): updated
+
+fix(model): optimized ([`9b6f9e2`](https://github.com/alexnazarv/python-practice-field/commit/9b6f9e2582f50df65da512155bf7d0fda66e77a1))
 
 * fix(core): updated
 
