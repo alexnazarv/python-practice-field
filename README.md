@@ -14,7 +14,7 @@
   <img src=https://github.com/alexnazarv/training-project-api/actions/workflows/tests.yml/badge.svg>
 </a>
 <a>
-  <img src=https://github.com/alexnazarv/training-project-api/actions/workflows/publish_package.yml/badge.svg>
+  <img src=https://github.com/alexnazarv/training-project-api/actions/workflows/release.yml/badge.svg>
 </a>
 <a>
   <img src=https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit>

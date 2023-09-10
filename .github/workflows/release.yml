@@ -12,12 +12,22 @@ on:
       - Dockerfile
       - pyproject.toml
       - poetry.lock
+  workflow_dispatch:
+    inputs:
+      run_manual_job:
+        description: 'running manual'
+        required: true
+        type: choice
+        options:
+        - true
 
 permissions:
   contents: write
 
 env:
   GH_TOKEN: ${{ vars.GH_TOKEN }}
+  PYTHON_VERSION: "3.10.10"
+  POETRY_VERSION: "1.5.1"
 
 jobs:
   semantic_release:
@@ -70,3 +80,25 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/training_api:${{ needs.semantic_release.outputs.tag }}
+
+
+  publish_package:
+    if: github.event.inputs.run_manual_job == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: install poetry
+      run: pipx install poetry==${{ env.POETRY_VERSION }}
+
+    - name: set up python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'poetry'
+    - run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+
+    - name: publish to pypi
+      run: poetry publish --build
