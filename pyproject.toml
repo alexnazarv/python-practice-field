@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-practice-field"
-version = "0.0.1"
+version = "0.0.1-rc.2"
 description = ""
 authors = ["alexnazarv <alexnazarv@gmail.com>"]
 readme = "README.md"
@@ -25,8 +25,8 @@ mypy = "1.5.1"
 [tool.poetry.group.test.dependencies]
 httpx = "^0.24.1"
 pre-commit = "^3.4.0"
-pytest = "7.4.0"
-pytest-cov = "4.1.0"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
