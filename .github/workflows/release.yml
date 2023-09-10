@@ -12,6 +12,7 @@ on:
       - Dockerfile
       - pyproject.toml
       - poetry.lock
+      - .github/workflows/**
 
 permissions:
   contents: write
@@ -70,7 +71,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/training_api:${{ env.TAG }}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/training_api:$TAG
 
 
   publish_package:
