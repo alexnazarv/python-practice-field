@@ -2,6 +2,17 @@
 
 
 
+## v0.0.1-rc.2 (2023-09-10)
+
+### Chore
+
+* chore(ci): adjust docker publish step ([`60adf59`](https://github.com/alexnazarv/python-practice-field/commit/60adf59df6adcb69ca57bdb9a7cab9b4cc7f172d))
+
+### Fix
+
+* fix: adjust pytest version ([`a7af298`](https://github.com/alexnazarv/python-practice-field/commit/a7af298a9e2659288f48724fe52b4a91a8446759))
+
+
 ## v0.0.1-rc.1 (2023-09-10)
 
 ### Fix
