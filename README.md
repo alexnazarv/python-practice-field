@@ -26,17 +26,8 @@ Just a practice field for making, linting, testing and describing python project
 Here is a Docker image that runs FastAPI server with two simple get and post methods.
 
 ### TO DO:
-* Написать команду в тестовый CI которая будет тегировать коммит. Дальше используя этот тег пушить пакет в pypi и имедж в докерхаб с тегом коммита.
 #### CI:
 Добавить правила для коммитов:
-* В пайтон код:
-  * прогон линтеров и тестов
-  * пуш пакета в PYPI
-  * пуш имеджа в регистри
-  * мануал шаг с деплоем на тест
-  * мануал шаг с деплоем на прод
-* В Dockerfile
-  * пуш имеджа в регистри
   * мануал шаг с деплоем на тест
   * мануал шаг с деплоем на прод
 

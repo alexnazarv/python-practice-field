@@ -2,7 +2,7 @@
 
 
 
-## v0.0.1 (2023-09-10)
+## v0.0.1-rc.1 (2023-09-10)
 
 ### Fix
 
@@ -33,6 +33,34 @@ Build Updates:
 - Added CI/CD configuration for automated testing. ([`3fca3de`](https://github.com/alexnazarv/python-practice-field/commit/3fca3de86b7c3e1cc14a5390efd6bb8d60ff9224))
 
 ### Unknown
+
+*  fix: Multiple bug fixes, documentation, and build updates
+
+- Fix issue #123: Resolved a problem with user authentication.
+- Fix issue #124: Addressed a UI rendering issue on mobile devices.
+- Fix issue #125: Corrected an error in the data validation logic.
+
+Documentation Changes:
+- Updated documentation for the new authentication process.
+- Added usage examples for mobile rendering improvements.
+
+Build Updates:
+- Upgraded dependencies for improved security.
+- Added CI/CD configuration for automated testing. ([`a68ac88`](https://github.com/alexnazarv/python-practice-field/commit/a68ac8802d89e3a190f66d7d7b8d787ce54f08a2))
+
+*  fix: Multiple bug fixes, documentation, and build updates
+
+- Fix issue #123: Resolved a problem with user authentication.
+- Fix issue #124: Addressed a UI rendering issue on mobile devices.
+- Fix issue #125: Corrected an error in the data validation logic.
+
+Documentation Changes:
+- Updated documentation for the new authentication process.
+- Added usage examples for mobile rendering improvements.
+
+Build Updates:
+- Upgraded dependencies for improved security.
+- Added CI/CD configuration for automated testing. ([`bbf00a9`](https://github.com/alexnazarv/python-practice-field/commit/bbf00a9cde0663ce3db36210f523777df8dba0ec))
 
 * Dev (#3)
 

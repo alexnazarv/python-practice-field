@@ -3,16 +3,16 @@ name: release
 on:
   workflow_run:
     workflows: ["tests & lints"]
-    branches: "**"
+    branches: ["master", "dev"]
     types:
       - completed
   push:
+    branches: ["master", "dev"]
     paths:
       - Dockerfile
-      - app/**
-      - tests/**
       - pyproject.toml
       - poetry.lock
+      - .github/workflows/**
 
 permissions:
   contents: write
@@ -29,22 +29,16 @@ jobs:
     permissions:
       id-token: write
       contents: write
+    outputs:
+      tag: ${{ steps.step_semantic_release.outputs.tag }}
 
     steps:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
-    # - name: Set tag
-    #   id: vars
-    #   run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
-    # - name: Check output
-    #   env:
-    #     RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
-    #   run: |
-    #     echo $RELEASE_VERSION
-    #     echo ${{ steps.vars.outputs.tag }}
 
     - name: Python Semantic Release
+      id: step_semantic_release
       uses: python-semantic-release/python-semantic-release@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -55,6 +49,10 @@ jobs:
     needs: [semantic_release]
 
     steps:
+    - env:
+        TAG: ${{ needs.semantic_release.outputs.tag }}
+      run: echo "$TAG"
+
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -73,7 +71,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/training_api:${{ github.ref_name.tag }}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/training_api:$TAG
 
 
   publish_package:
