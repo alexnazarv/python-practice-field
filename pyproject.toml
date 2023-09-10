@@ -20,7 +20,7 @@ wemake-python-styleguide = "^0.18.0"
 python-semantic-release = "^8.0.8"
 
 [tool.poetry.group.mypy.dependencies]
-mypy = "1.5.1"
+mypy = "^1.5.1"
 
 [tool.poetry.group.test.dependencies]
 httpx = "^0.24.1"
