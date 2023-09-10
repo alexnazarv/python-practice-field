@@ -40,6 +40,9 @@ jobs:
         cache: 'poetry'
     - run: poetry install --no-root --only main,semantic_release
 
+    - name: git log
+      run: git log
+
     - name: semantic_release
       run: poetry run semantic-release version
 
