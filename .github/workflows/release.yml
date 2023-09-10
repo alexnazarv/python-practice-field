@@ -49,6 +49,10 @@ jobs:
     needs: [semantic_release]
 
     steps:
+    - env:
+        TAG: ${{ needs.semantic_release.outputs.tag }}
+      run: echo "$TAG"
+
     - name: Checkout
       uses: actions/checkout@v3
 
@@ -68,8 +72,6 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/training_api:${{ needs.semantic_release.outputs.tag }}
-
-
   publish_package:
     runs-on: ubuntu-latest
     needs: [semantic_release]
