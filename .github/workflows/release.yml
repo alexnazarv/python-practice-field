@@ -31,6 +31,7 @@ env:
 
 jobs:
   semantic_release:
+    if: github.event.inputs.run_manual_job != 'true'
     runs-on: ubuntu-latest
     concurrency: release
     permissions:
