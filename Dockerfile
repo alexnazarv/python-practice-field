@@ -1,4 +1,4 @@
-FROM python:3.10.9-alpine
+FROM python:3.10.10-alpine
 COPY ./pyproject.toml ./poetry.lock* ./
 RUN pip install poetry==1.5.1 && poetry install --only main --no-cache --no-root
 COPY ./app /app
